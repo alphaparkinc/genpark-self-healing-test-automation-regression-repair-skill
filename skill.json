@@ -1,0 +1,38 @@
+{
+  "name": "genpark-self-healing-test-automation-regression-repair-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Self-healing test automation framework analyzing failing CI assertions, repairing broken UI selectors, and generating verified fix PRs.",
+  "author": "genpark",
+  "category": "engineering",
+  "tags": [
+    "test-automation",
+    "self-healing",
+    "e2e-testing",
+    "ci-repair",
+    "qodex"
+  ],
+  "inputs": {
+    "failing_test_suite": {
+      "type": "string"
+    },
+    "failure_logs": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "repaired_tests": {
+      "type": "array"
+    },
+    "tests_healed_count": {
+      "type": "integer"
+    },
+    "retest_pass_rate_pct": {
+      "type": "number"
+    },
+    "pr_draft_created": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
